@@ -1,67 +1,46 @@
-body {
-    background-color: #f4f7f9;
-    color: #222222;
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0;
-}
+<!DOCTYPE html>
+<html lang="fi">
 
-header {
-    background-color: #123b66;
-    color: white;
-    padding: 25px;
-    text-align: center;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesäpallo</title>
 
-h1,
-h2,
-h3 {
-    font-family: "Oswald", Arial, sans-serif;
-}
+    <linktyle.css
+</head>
 
-h1 {
-    margin: 0 0 15px 0;
-}
+<body>
 
-h2 {
-    color: #123b66;
-}
+    <header>
+        <h1>Pesäpallo</h1>
 
-nav {
-    margin-top: 10px;
-}
+        <nav>
+            <a href="index.html">Etusivu</a>
+            <a href="saannot.html">Säännöt</a>
+            <a href="historia.html">Historia</a>
+        </nav>
+    </header>
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 8px 12px;
-    border: 1px solid white;
-}
+    <main>
+        <section>
+            <h2>Tervetuloa pesäpallon pariin!</h2>
 
-nav a:hover {
-    background-color: white;
-    color: #123b66;
-}
+            <p>
+                Pesäpallo on suomalainen joukkuepeli, jossa yhdistyvät
+                lyöminen, juokseminen ja ulkopeli.
+            </p>
 
-main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-}
+            <p>
+                Tällä sivustolla tutustutaan pesäpalloon, sen sääntöihin
+                ja historiaan.
+            </p>
+        </section>
+    </main>
 
-section {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc;
-}
+    <footer>
+        <p>Pesäpallo-sivusto</p>
+    </footer>
 
-footer {
-    background-color: #123b66;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-}
+</body>
+
+</html>
