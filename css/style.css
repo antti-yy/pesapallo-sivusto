@@ -1,79 +1,271 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+
+/* ------------------------------
+   Yleiset asetukset
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f4f4f4;
-    color: #222;
+    padding: 0;
+    background-color: #f2f5f1;
+    color: #222222;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
 }
+
+
+/* ------------------------------
+   Koko sivuston Grid-layout
+------------------------------ */
+
+.site {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-rows: auto 1fr auto;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
 
 header {
-    background-color: #1f4d2e;
+    background-color: #1b5e20;
     color: white;
-    padding: 20px;
+
+    padding: 25px;
+
     text-align: center;
+
+    border-bottom: 5px solid #f9a825;
 }
 
-header h1 {
+h1,
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
     margin: 0 0 15px 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 36px;
+    font-size: 40px;
+}
+
+h2 {
+    color: #1b5e20;
+    margin-top: 0;
+}
+
+
+/* ------------------------------
+   Navigaatio
+------------------------------ */
+
+nav {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
 }
 
 nav a {
     color: white;
+
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    font-weight: 600;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #f9a825;
+
+    color: #222222;
 }
+
+
+/* ------------------------------
+   Pääsisältö
+------------------------------ */
 
 main {
-    max-width: 900px;
+    width: 90%;
+    max-width: 1000px;
+
     margin: 30px auto;
-    padding: 0 20px;
-}
 
-section {
-    background-color: white;
     padding: 30px;
-    border: 1px solid #ddd;
+
+    background-color: white;
+
+    border: 1px solid #d0d8ce;
+
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #1f4d2e;
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    margin-top: 0;
+
+/* ------------------------------
+   Etusivun pääosio
+------------------------------ */
+
+.hero {
+    margin-bottom: 30px;
+
+    padding: 30px;
+
+    background-color: #e8f0e7;
+
+    border-left: 6px solid #1b5e20;
+
+    border-radius: 8px;
 }
 
-h3 {
-    color: #2f6b3f;
-    font-family: 'Poppins', sans-serif;
+
+/* ------------------------------
+   Korttien Grid-layout
+------------------------------ */
+
+.kortit {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
     margin-top: 30px;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
+
+/* ------------------------------
+   Kortit
+------------------------------ */
+
+.kortti {
+    padding: 25px;
+
+    background-color: #f8faf7;
+
+    border: 2px solid #1b5e20;
+
+    border-radius: 10px;
+}
+
+.kortti h2 {
+    font-size: 24px;
+}
+
+.kortti a {
+    color: #1b5e20;
+
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.kortti a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------
+   Listat
+------------------------------ */
+
+.lista {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background-color: #fff8e1;
+
+    border: 1px solid #f9a825;
+
+    border-radius: 10px;
 }
 
 li {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
+
+/* ------------------------------
+   Kappaleet
+------------------------------ */
+
+p {
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
 footer {
-    background-color: #1f4d2e;
-    color: white;
-    text-align: center;
-    padding: 15px;
     margin-top: 40px;
+
+    padding: 20px;
+
+    background-color: #1b5e20;
+
+    color: white;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ------------------------------
+   Responsiivisuus
+------------------------------ */
+
+@media (max-width: 700px) {
+
+    .kortit {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+
+        width: 100%;
+    }
+
+    main {
+        width: 95%;
+
+        margin: 15px auto;
+
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .kortti {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
 }
