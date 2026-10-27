@@ -7,87 +7,96 @@
     <title>Pesäpallo – Etusivu</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div class="site">
 
-        <header>
-            <h1>Pesäpallo</h1>
+    <header class="sivun-otsikko">
+        <h1>Pesäpallo</h1>
+        <p>Suomalainen kansallispeli</p>
+    </header>
 
-            <nav>
-                <a href="index.html">Etusivu</a>
-                <a href="saannot.html">Säännöt</a>
-                <a href="historia.html">Historia</a>
-            </nav>
-        </header>
+    <nav class="navigaatio" aria-label="Päänavigaatio">
+        <a href="index.html" aria-current="page">Etusivu</a>
+        <a href="saannot.html">Säännöt</a>
+        <a href="historia.html">Historia</a>
+    </nav>
 
-        <main>
-            <section class="hero">
-                <div class="hero-teksti">
-                    <h2>Tervetuloa pesäpallon pariin!</h2>
-
-                    <p>
-                        Pesäpallo on suomalainen joukkuepeli, jossa
-                        yhdistyvät lyöminen, juokseminen ja ulkopeli.
-                    </p>
-
-                    <p>
-                        Tällä sivustolla tutustutaan pesäpalloon,
-                        sen sääntöihin ja historiaan.
-                    </p>
-                </div>
-
-                <img
-                    src="images/pallo.jpg"
-                    alt="Keltainen pallo punertavalla kenttäpinnalla"
-                    width="1080"
-                    height="720"
-                    class="hero-kuva"
-                >
-            </section>
-
-            <section class="kortit">
-                <article class="kortti">
-                    <h2>Pesäpallon säännöt</h2>
-                    <p>
-                        Tutustu pesäpallon tärkeimpiin perussääntöihin
-                        ja siihen, miten peli etenee.
-                    </p>
-                    <a href="saannot.html">Lue säännöistä →</a>
-                </article>
-
-                <article class="kortti">
-                    <h2>Pesäpallon historia</h2>
-                    <p>
-                        Tutustu pesäpallon historiaan ja siihen,
-                        miten laji on kehittynyt Suomessa.
-                    </p>
-                    <a href="historia.html">Lue historiasta →</a>
-                </article>
-            </section>
-
-            <section class="media-osio">
-                <h2>Videoesimerkki</h2>
-
+    <main>
+        <section class="hero">
+            <div class="hero-teksti">
+                <h2>Tervetuloa pesäpallon maailmaan!</h2>
                 <p>
-                    Alla on esimerkkivideo, jolla voi testata
-                    sivuston videotoimintoa. Video ei käsittele pesäpalloa.
+                    Pesäpallo on suomalainen joukkuepeli, jossa yhdistyvät
+                    lyöminen, juokseminen, heittäminen ja joukkueen yhteistyö.
+                    Peliä pelataan ulkokentällä kahden joukkueen välillä.
                 </p>
+                <p>
+                    Tutustu tällä sivustolla pesäpallon perusteisiin,
+                    sääntöihin ja historiaan.
+                </p>
+            </div>
 
-                <video controls class="pesis-video">
-                    <source
-                        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-                        type="video/mp4"
-                    >
-                    Selaimesi ei tue videon toistamista.
-                </video>
-            </section>
-        </main>
+            <img
+                class="hero-kuva"
+                src="images/pallo.jpg"
+                alt="Pallo pelikentällä"
+                width="1080"
+                height="720">
+        </section>
 
-        <footer>
-            <p>Pesäpallo-sivusto &copy; 2026</p>
-        </footer>
+        <section class="kortit">
+            <article class="kortti">
+                <h2>Pesäpallon säännöt</h2>
+                <p>
+                    Opi, miten pesäpalloa pelataan ja miten joukkue voi
+                    saada juoksuja.
+                </p>
+                <a class="linkki" href="saannot.html">Tutustu sääntöihin</a>
+            </article>
 
-    </div>
+            <article class="kortti">
+                <h2>Pesäpallon historia</h2>
+                <p>
+                    Lue, miten pesäpallo kehittyi suomalaiseksi
+                    kansallispeliksi.
+                </p>
+                <a class="linkki" href="historia.html">Tutustu historiaan</a>
+            </article>
+        </section>
+
+        <section class="media-osio">
+            <h2>Katso pesäpallovideo</h2>
+            <p>
+                Katso video ja tutustu pesäpalloon videon avulla.
+            </p>
+
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/uLBNd56MG34"
+                    title="Pesäpallovideo YouTubesta"
+                    width="560"
+                    height="315"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p>
+                Jos video ei näy, voit
+                <a
+                    href="https://www.youtube.com/watch?v=uLBNd56MG34"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    katsoa sen YouTubessa.
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pesäpallo-sivusto | Verkkosivujen harjoitustyö</p>
+    </footer>
+
 </body>
 </html>
