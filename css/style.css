@@ -116,10 +116,20 @@ main {
 
 
 /* ------------------------------
-   Etusivun pääosio
+   Hero-osio
 ------------------------------ */
 
 .hero {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+
     margin-bottom: 30px;
 
     padding: 30px;
@@ -129,6 +139,26 @@ main {
     border-left: 6px solid #1b5e20;
 
     border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+/* ------------------------------
+   Kuva
+------------------------------ */
+
+.hero-kuva {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    border: 3px solid #1b5e20;
+
+    display: block;
 }
 
 
@@ -200,6 +230,40 @@ li {
 
 
 /* ------------------------------
+   Media-osio
+------------------------------ */
+
+.media-osio {
+    position: relative;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background-color: #e8f0e7;
+
+    border: 2px solid #1b5e20;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.pesis-video {
+    display: block;
+
+    width: 100%;
+    max-width: 640px;
+
+    height: auto;
+
+    margin: 20px auto;
+
+    border-radius: 8px;
+}
+
+
+/* ------------------------------
    Kappaleet
 ------------------------------ */
 
@@ -213,6 +277,8 @@ p {
 ------------------------------ */
 
 footer {
+    position: relative;
+
     margin-top: 40px;
 
     padding: 20px;
@@ -234,6 +300,10 @@ footer p {
 ------------------------------ */
 
 @media (max-width: 700px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
 
     .kortit {
         grid-template-columns: 1fr;
@@ -267,5 +337,9 @@ footer p {
 
     h1 {
         font-size: 32px;
+    }
+
+    .hero-kuva {
+        height: 250px;
     }
 }
