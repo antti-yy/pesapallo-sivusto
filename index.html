@@ -24,11 +24,13 @@
         <section class="hero">
             <div class="hero-teksti">
                 <h2>Tervetuloa pesäpallon maailmaan!</h2>
+
                 <p>
                     Pesäpallo on suomalainen joukkuepeli, jossa yhdistyvät
                     lyöminen, juokseminen, heittäminen ja joukkueen yhteistyö.
                     Peliä pelataan ulkokentällä kahden joukkueen välillä.
                 </p>
+
                 <p>
                     Tutustu tällä sivustolla pesäpallon perusteisiin,
                     sääntöihin ja historiaan.
@@ -38,7 +40,7 @@
             <img
                 class="hero-kuva"
                 src="images/pallo.jpg"
-                alt="Pallo pelikentällä"
+                alt="Pesäpallokenttä ja pelaajia ottelun aikana"
                 width="1080"
                 height="720">
         </section>
@@ -46,27 +48,36 @@
         <section class="kortit">
             <article class="kortti">
                 <h2>Pesäpallon säännöt</h2>
+
                 <p>
-                    Opi, miten pesäpalloa pelataan ja miten joukkue voi
-                    saada juoksuja.
+                    Opi, miten pesäpalloa pelataan ja miten joukkue
+                    voi saada juoksuja.
                 </p>
-                <a class="linkki" href="saannot.html">Tutustu sääntöihin</a>
+
+                <a class="linkki" href="saannot.html">
+                    Tutustu sääntöihin
+                </a>
             </article>
 
             <article class="kortti">
                 <h2>Pesäpallon historia</h2>
+
                 <p>
                     Lue, miten pesäpallo kehittyi suomalaiseksi
                     kansallispeliksi.
                 </p>
-                <a class="linkki" href="historia.html">Tutustu historiaan</a>
+
+                <a class="linkki" href="historia.html">
+                    Tutustu historiaan
+                </a>
             </article>
         </section>
 
         <section class="media-osio">
             <h2>Katso pesäpallovideo</h2>
+
             <p>
-                Katso video ja tutustu pesäpalloon videon avulla.
+                Tutustu pesäpalloon videon avulla.
             </p>
 
             <div class="video-container">
@@ -91,6 +102,113 @@
                     katsoa sen YouTubessa.
                 </a>
             </p>
+        </section>
+
+        <section class="lomake-osio">
+            <h2>Anna palautetta sivustosta</h2>
+
+            <p>
+                Haluamme kuulla mielipiteesi sivustosta.
+                Voit jättää palautetta alla olevalla lomakkeella.
+            </p>
+
+            <form class="palautelomake" action="#" method="get">
+
+                <div class="lomake-kentta">
+                    <label for="nimi">Nimi *</label>
+                    <input
+                        type="text"
+                        id="nimi"
+                        name="nimi"
+                        placeholder="Kirjoita nimesi"
+                        minlength="2"
+                        maxlength="50"
+                        required>
+                </div>
+
+                <div class="lomake-kentta">
+                    <label for="sahkoposti">Sähköpostiosoite *</label>
+                    <input
+                        type="email"
+                        id="sahkoposti"
+                        name="sahkoposti"
+                        placeholder="esimerkki@email.fi"
+                        required>
+                </div>
+
+                <div class="lomake-kentta">
+                    <label for="aihe">Mitä sivua koskee palautteesi?</label>
+                    <select id="aihe" name="aihe" required>
+                        <option value="">Valitse aihe</option>
+                        <option value="etusivu">Etusivu</option>
+                        <option value="saannot">Säännöt</option>
+                        <option value="historia">Historia</option>
+                        <option value="yleinen">Yleinen palaute</option>
+                    </select>
+                </div>
+
+                <fieldset class="lomake-kentta">
+                    <legend>Mitä mieltä olet sivustosta?</legend>
+
+                    <label class="valinta">
+                        <input
+                            type="radio"
+                            name="arvio"
+                            value="hyva"
+                            required>
+                        Hyvä
+                    </label>
+
+                    <label class="valinta">
+                        <input
+                            type="radio"
+                            name="arvio"
+                            value="kohtalainen">
+                        Kohtalainen
+                    </label>
+
+                    <label class="valinta">
+                        <input
+                            type="radio"
+                            name="arvio"
+                            value="parannettavaa">
+                        Parannettavaa
+                    </label>
+                </fieldset>
+
+                <div class="lomake-kentta">
+                    <label for="palaute">Kirjoita palautteesi *</label>
+                    <textarea
+                        id="palaute"
+                        name="palaute"
+                        rows="5"
+                        minlength="5"
+                        maxlength="1000"
+                        placeholder="Kirjoita tähän palautteesi..."
+                        required></textarea>
+                </div>
+
+                <div class="lomake-kentta">
+                    <label class="valinta">
+                        <input
+                            type="checkbox"
+                            id="hyvaksyminen"
+                            name="hyvaksyminen"
+                            value="kylla"
+                            required>
+                        Vahvistan, että palautteeni on asiallinen.
+                    </label>
+                </div>
+
+                <button type="submit" class="laheta-nappi">
+                    Lähetä palaute
+                </button>
+
+                <p class="pakolliset-tiedot">
+                    * Tähdellä merkityt kentät ovat pakollisia.
+                </p>
+
+            </form>
         </section>
     </main>
 
