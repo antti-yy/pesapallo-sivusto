@@ -143,6 +143,56 @@ h2 {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
 }
 
+/* Taulukon tyylit */
+
+.taulukko-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0 30px;
+}
+
+.tietotaulukko {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: left;
+}
+
+.tietotaulukko caption {
+    padding: 12px;
+    font-weight: 700;
+    color: #1f593b;
+    text-align: left;
+}
+
+.tietotaulukko th,
+.tietotaulukko td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #d5dfd4;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tietotaulukko thead {
+    background-color: #1f593b;
+    color: white;
+}
+
+.tietotaulukko tbody th {
+    font-weight: 700;
+    color: #1f593b;
+}
+
+.tietotaulukko tbody tr:nth-child(even) {
+    background-color: #edf2e9;
+}
+
+.tietotaulukko tbody tr:hover {
+    background-color: #e1eadf;
+}
+
+/* Videon tyylit */
+
 .media-osio {
     position: relative;
     margin: 40px 0 20px;
@@ -170,6 +220,105 @@ h2 {
     border: 0;
 }
 
+/* Palautelomakkeen tyylit */
+
+.lomake-osio {
+    margin: 40px 0;
+    padding: 28px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.palautelomake {
+    max-width: 650px;
+    margin: 25px auto 0;
+}
+
+.lomake-kentta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.lomake-kentta label,
+.lomake-kentta legend {
+    font-weight: 700;
+    color: #1f593b;
+}
+
+.lomake-kentta input[type="text"],
+.lomake-kentta input[type="email"],
+.lomake-kentta select,
+.lomake-kentta textarea {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    color: #24352a;
+    background-color: #fafbf8;
+    border: 1px solid #aab9a9;
+    border-radius: 6px;
+}
+
+.lomake-kentta input:focus,
+.lomake-kentta select:focus,
+.lomake-kentta textarea:focus {
+    outline: 3px solid #b6d5bd;
+    border-color: #1f593b;
+}
+
+.lomake-kentta textarea {
+    resize: vertical;
+}
+
+.lomake-kentta fieldset {
+    border: 1px solid #aab9a9;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.lomake-kentta legend {
+    padding: 0 8px;
+}
+
+.valinta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+    font-weight: 400 !important;
+    color: #24352a !important;
+}
+
+.valinta input {
+    width: 18px;
+    height: 18px;
+    accent-color: #1f593b;
+}
+
+.laheta-nappi {
+    padding: 12px 24px;
+    background-color: #1f593b;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.laheta-nappi:hover,
+.laheta-nappi:focus {
+    background-color: #38784f;
+}
+
+.pakolliset-tiedot {
+    font-size: 0.9rem;
+    color: #526353;
+}
+
 footer {
     position: relative;
     margin-top: 35px;
@@ -183,10 +332,13 @@ footer p {
     margin: 0;
 }
 
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
     outline: 3px solid #e6b84a;
     outline-offset: 3px;
 }
+
+/* Mobiilinäytöt */
 
 @media (max-width: 700px) {
     .sivun-otsikko h1 {
@@ -211,11 +363,17 @@ a:focus-visible {
     }
 
     .media-osio,
-    .sisalto {
+    .sisalto,
+    .lomake-osio {
         padding: 20px;
     }
 
     main {
         padding: 20px 14px;
+    }
+
+    .tietotaulukko th,
+    .tietotaulukko td {
+        padding: 10px;
     }
 }
